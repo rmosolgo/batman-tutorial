@@ -1,0 +1,1 @@
+class Events.ApplicationController extends Batman.Controller
