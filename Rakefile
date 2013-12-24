@@ -35,18 +35,22 @@ file TOC do
       entry["filename"] = file.sub(/chapters\/?/, '').sub(/\.md/, '')
       front_matter = YAML.load_file(file)
       entry["title"] = front_matter["title"]
-      open(file) do |f|
+      open(file, 'r+') do |f|
         new_content = ""
         f.each_line do |line|
           if line =~ HEADING_MATCHER
-            title = line.sub(HEADING_MATCHER, '').sub(/\n/, '')
+            line.sub!(/\n/, '')
+            title = line.sub(HEADING_MATCHER, '')
             anchor = safe_underscore(title)
             named_tag = %{<a name="#{anchor}"></a>}
-            line << named_tag
+            line << "#{named_tag}\n"
             entry["sections"] << {"title" => title, "anchor" => anchor}
           end
           new_content << line
         end
+        f.rewind
+        puts new_content
+        f.write(new_content)
       end
     else
       entry["title"] = TOC_INDEX[idx]["title"]
