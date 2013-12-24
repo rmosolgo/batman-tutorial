@@ -39,11 +39,11 @@ file TOC do
         new_content = ""
         f.each_line do |line|
           if line =~ HEADING_MATCHER
-            line.sub!(/\n/, '')
+            line.sub!(/\<.*\n/, '')
             title = line.sub(HEADING_MATCHER, '')
             anchor = safe_underscore(title)
             named_tag = %{<a name="#{anchor}"></a>}
-            line << "#{named_tag}\n"
+            line ="#{named_tag}\n\n#{line}"
             entry["sections"] << {"title" => title, "anchor" => anchor}
           end
           new_content << line

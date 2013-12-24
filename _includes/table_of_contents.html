@@ -11,7 +11,7 @@
       <ul>
         {% for section in chapter.sections %}
           <li>
-            <a href='/chapters/{{chapter.filename}}.html'>{{section.title}}</a>
+            <a href='/chapters/{{chapter.filename}}.html#{{section.anchor}}'>{{section.title}}</a>
           </li>
         {% endfor %}
       </ul>

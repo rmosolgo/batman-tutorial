@@ -1,54 +1,61 @@
 ---
 - sections:
-  - title: Why batman.js?
+  - title: "Why batman.js?      \n"
     anchor: why_batman_js
-  - title: What do I need to start?
+  - title: "What do I need to start?      \n"
     anchor: what_do_i_need_to_start
   filename: introduction
   title: Introduction
 - sections:
-  - title: Make a new Rails app
+  - title: "Make a new Rails app      \n"
     anchor: make_a_new_rails_app
-  - title: Directory structure
+  - title: "Directory structure      \n"
     anchor: directory_structure
   filename: install_batman_js
   title: Install Batman.js
 - sections:
-  - title: Make a new route in your app definition
+  - title: "Make a new route in your app definition      \n"
     anchor: make_a_new_route_in_your_app_definition
-  - title: Make a controller to handle requests
+  - title: "Make a controller to handle requests      \n"
     anchor: make_a_controller_to_handle_requests
-  - title: HTML templates go in `/html`
+  - title: "HTML templates go in `/html`      \n"
     anchor: html_templates_go_in_html
   filename: static_pages
   title: Static Pages
 - sections:
-  - title: Generate the scaffold
+  - title: "Generate the scaffold      \n"
     anchor: generate_the_scaffold
-  - title: Put validations on the model
+  - title: "Put validations on the model      \n"
     anchor: put_validations_on_the_model
-  - title: Make a new model
+  - title: "Make a new model      \n"
     anchor: make_a_new_model
-  - title: Take 'er for a spin
+  - title: "Take 'er for a spin      \n"
     anchor: take_er_for_a_spin
-  - title: Validations
+  - title: "Validations      \n"
     anchor: validations
   filename: modeling_events
   title: Modeling Events
 - sections:
-  - title: Routing events
+  - title: |
+      Routing events
     anchor: routing_events
-  - title: Handling requests for events
+  - title: |
+      Handling requests for events
     anchor: handling_requests_for_events
-  - title: View and Template
+  - title: |
+      View and Template
     anchor: view_and_template
-  - title: span data-bind
+  - title: |
+      span data-bind
     anchor: span_data_bind
-  - title: The index view
+  - title: |
+      The index view
     anchor: the_index_view
-  - title: view filters
+  - title: |
+      view filters
     anchor: view_filters
-  - title: double-dash view bindings
+  - title: |
+      double-dash view bindings
     anchor: double_dash_view_bindings
   filename: gathering_and_displaying_information
   title: Gathering and Displaying Information
@@ -62,9 +69,9 @@
   title: Event Has Many X Through Y
   filename: event_has_many_x_through_y
 - sections:
-  - title: Make a custom view
+  - title: "Make a custom view      \n"
     anchor: make_a_custom_view
-  - title: Make a template
+  - title: "Make a template      \n"
     anchor: make_a_template
   filename: custom_views
   title: Custom Views

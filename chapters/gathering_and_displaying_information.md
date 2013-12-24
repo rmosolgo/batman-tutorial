@@ -16,8 +16,9 @@ To provide a UI for our `Event` model, we'll:
 - provide templates for the actions of `EventsController`
 - fill those templates with view bindings
 
-### Routing events
+<a name="routing_events"></a>
 
+### Routing events
 Open `events.js.coffee` and add routes for `events`:
 
 {% highlight coffeescript %}
@@ -35,8 +36,9 @@ class Events extends Batman.App
 
 If you're familiar with this pattern, you might notice that `destroy` and `create` routes are missing. Given the fact that a single-page appliation is fundamentally stateful (whereas a REST-based web app is stateless), these actions are accomplished in a different way. Read on!
 
-### Handling requests for events
+<a name="handling_requests_for_events"></a>
 
+### Handling requests for events
 Calling `@resources 'events'` depends on having an `EventsController`. Let's define it in `/controllers/events_controller.js.coffee`:
 
 {% highlight coffeescript %}
@@ -92,8 +94,9 @@ A few things to keep in mind:
 With this controller action, we'll load a record from storage and make it accessible and observable to our view.
 
 
-### View and Template
+<a name="view_and_template"></a>
 
+### View and Template
 When using `@resources` in your app's routes, batman.js will subclass `Batman.View` on the fly, meaning that you don't have to define one yourself (but you may -- in which case it will use your implementation).  The automatically-created view will also default to check for a template with the name `"html/#{camel-cased resource name}/#{action name}.html"`. In our case, that's `"html/events/show.html"`.
 
 So, our corresponding view class `Events.EventsShowView` will be created for us on the fly -- let's not worry about it right now. But let's create the template that the implicitly-created view will use to render.
@@ -134,12 +137,14 @@ event.save(function(err, savedEvent){
 
 You should see your template, with `Game Night` and the current time rendered in it.
 
-### span data-bind
+<a name="span_data_bind"></a>
 
+### span data-bind
 Using `<span data-bind='some.value'></span>` is a very common way to render dynamic values into static text. Don't hesitate to use it when developing a batman.js application!
 
-### The index view
+<a name="the_index_view"></a>
 
+### The index view
 We'll do something very similar to implement a list of events:
 
 - create a controller action to fetch all events and set them on the controller
@@ -180,8 +185,9 @@ Let's take advantage of that observable data with some view bindings:
 
 This introduces a few new things:
 
-### view filters
+<a name="view_filters"></a>
 
+### view filters
 View filters allow you to modify values before they're rendered into HTML. When you bind a value to a node, you can pass the value through a chain of filters. When the value changes, it is passed through the filters again, then the result is rendered into HTML.
 
 With view filters, the output of the first filter becomes the first argument of the second filter, so:
@@ -207,8 +213,9 @@ Or variables accessible in the _current context_:
 </p>
 {% endhighlight %}
 
-### double-dash view bindings
+<a name="double_dash_view_bindings"></a>
 
+### double-dash view bindings
 Some view bindings take a parameter in the _key_ of the HTML element. For example, the `data-foreach` binding above takes `upcomingevent` as a parameter. To using a binding like this, use the syntax:
 
 {% highlight coffeescript %}
