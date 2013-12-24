@@ -1,0 +1,70 @@
+---
+- sections:
+  - title: Why batman.js?
+    anchor: why_batman_js
+  - title: What do I need to start?
+    anchor: what_do_i_need_to_start
+  filename: introduction
+  title: Introduction
+- sections:
+  - title: Make a new Rails app
+    anchor: make_a_new_rails_app
+  - title: Directory structure
+    anchor: directory_structure
+  filename: install_batman_js
+  title: Install Batman.js
+- sections:
+  - title: Make a new route in your app definition
+    anchor: make_a_new_route_in_your_app_definition
+  - title: Make a controller to handle requests
+    anchor: make_a_controller_to_handle_requests
+  - title: HTML templates go in `/html`
+    anchor: html_templates_go_in_html
+  filename: static_pages
+  title: Static Pages
+- sections:
+  - title: Generate the scaffold
+    anchor: generate_the_scaffold
+  - title: Put validations on the model
+    anchor: put_validations_on_the_model
+  - title: Make a new model
+    anchor: make_a_new_model
+  - title: Take 'er for a spin
+    anchor: take_er_for_a_spin
+  - title: Validations
+    anchor: validations
+  filename: modeling_events
+  title: Modeling Events
+- sections:
+  - title: Routing events
+    anchor: routing_events
+  - title: Handling requests for events
+    anchor: handling_requests_for_events
+  - title: View and Template
+    anchor: view_and_template
+  - title: span data-bind
+    anchor: span_data_bind
+  - title: The index view
+    anchor: the_index_view
+  - title: view filters
+    anchor: view_filters
+  - title: double-dash view bindings
+    anchor: double_dash_view_bindings
+  filename: gathering_and_displaying_information
+  title: Gathering and Displaying Information
+- sections: []
+  title: Event Has Many X
+  filename: event_has_many_x
+- sections: []
+  title: Users and Authentication
+  filename: users_and_authentication
+- sections: []
+  title: Event Has Many X Through Y
+  filename: event_has_many_x_through_y
+- sections:
+  - title: Make a custom view
+    anchor: make_a_custom_view
+  - title: Make a template
+    anchor: make_a_template
+  filename: custom_views
+  title: Custom Views

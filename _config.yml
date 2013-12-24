@@ -1,5 +1,29 @@
-name: Your New Jekyll Site
+name: Batman.js Tutorial
 markdown: redcarpet
 pygments: true
 exclude:
-  - events_rails
+  - events_rails/
+  - Rakefile
+
+table_of_contents_index:
+  - title: Introduction
+  - title: Install Batman.js
+  - title: Static Pages
+  - title: Modeling Events
+  - title: Gathering and Displaying Information
+  - title: Event Has Many X
+  - title: Users and Authentication
+  - title: Event Has Many X Through Y
+  - title: Custom Views
+
+
+extras:
+  - title: "Naming Conventions in Batman.js"
+    filename: naming_conventions
+  - title: "Troubleshooting Batman.js"
+    filename: troubleshooting
+  - title: "Custom Validators"
+    filename: custom_validators
+  - title: "Installing Rails"
+    filename: installing_rails
+

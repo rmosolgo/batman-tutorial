@@ -1,0 +1,25 @@
+<h2>
+  Event:
+  <span data-bind='currentEvent.name'></span>
+</h2>
+<p>
+  Starts at:
+  <span data-bind='currentEvent.starts_at'></span>
+</p>
+<p>
+  Ends at:
+  <span data-bind='currentEvent.ends_at'></span>
+</p>
+
+<p>
+  <ul>
+    <li>
+      <span data-bind='"person" | pluralize 5 | capitalize'></span>
+      Attending
+    </li>
+    <li>
+      <span data-bind='"happy person" | pluralize 1 | capitalize'></span>
+      Declined
+    </li>
+  </ul>
+</p>

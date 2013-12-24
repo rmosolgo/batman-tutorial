@@ -1,11 +1,15 @@
 ---
+title: Static Pages
 layout: chapter
 ---
 
-# Static Pages
-
 Let's get your app to serve a new home page. We'll cover routing, controllers, and HTML templates.
 
+## Ruby on Rails
+- application layout is already defined
+
+## Other backend
+- Make sure layout is present (if needed?)
 
 ## Batman.js
 
@@ -23,7 +27,7 @@ We know we want to route the _root path_, `"/"`, to a static page called "home",
 
 {% highlight coffeescript %}
 class Events extends Batman.App
-  @root 'static_pages#home' # `static_pages` refers to StaticPagesController, `home` is an action of that controller
+  @root 'staticPages#home' # `staticPages` refers to StaticPagesController, `home` is an action of that controller
 {% endhighlight %}
 
 Make sure that any other mapping with `root` is removed. (If you're using Rails, remove `root "main#index"`).
@@ -37,7 +41,12 @@ In your `controllers` directory, make a new file called `static_pages_controller
 {% highlight coffeescript %}
 class Events.StaticPagesController extends Events.ApplicationController
   routingKey: "static_pages"
+
+  home: (params) ->
+
 {% endhighlight %}
+
+You have just defined a new controller, `StaticPagesController` and defined its `home` action. Notice that `home` has no function body. Since we're just rendering some HTML, we'll defer to to batman.js's implicit call to `render` at the end of the controller call chain.
 
 ### HTML templates go in `/html`
 
@@ -48,5 +57,13 @@ Let's create our new homepage. In your `/html` directory, create a new directory
 <p> Powered by batman.js </p>
 {% endhighlight %}
 
-Batman will use this HTML as a template when rendering views.
+Batman.js will use this HTML as a template when rendering views. It will be found automatically because:
+
+- The folder name is the underscore-case controller name
+- The file name is the same as the controller action name
+
+
+# Before moving on...
+
+Start your development server and visit the root path. You should see your new home page ("Events App Powered by batman.js"). If you do, then batman.js successfully routed the request to `StaticPagesController`'s  `home` action!
 

@@ -1,0 +1,15 @@
+<h2>All Events<h2>
+<p>
+  There are
+  <span data-bind='Event.all.length'></span>
+  upcoming events!
+</p>
+<ul>
+  <!-- `event` by itself is naming conflict! -->
+  <li data-foreach-upcomingevent='events'>
+      <a data-route='routes.events[upcomingevent]'>
+        <span data-bind='upcomingevent.name'></span>
+        <span data-bind='upcomingevent.starts_at | prepend "(" | append ")" '></span>
+      </a>
+  </li>
+</ul>

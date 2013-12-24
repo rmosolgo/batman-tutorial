@@ -8,7 +8,6 @@
 
 #= require_self
 
-#= require_tree ./lib
 #= require_tree ./controllers
 #= require_tree ./models
 #= require_tree ./views
@@ -16,21 +15,7 @@
 Batman.config.pathToHTML = '/assets/html'
 
 class Events extends Batman.App
-  # @resources 'products'
-  # @resources 'discounts', except: ['edit']
-  # @resources 'customers', only: ['new', 'show']
-
-  # @resources 'blogs', ->
-  #   @resources 'articles'
-
-  # @resources 'pages', ->
-  #   @collection 'count'
-  #   @member 'duplicate'
-
-  # @route 'apps', 'apps#index'
-  # @route 'apps/private', 'apps#private', as: 'privateApps'
-  @root 'main#index'
-  @route 'home', 'staticPages#home'
-  # @root 'static_pages#home'
+  @root 'staticPages#home'
+  @resources 'events'
 
 (global ? window).Events = Events

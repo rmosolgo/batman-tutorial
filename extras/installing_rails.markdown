@@ -1,4 +1,5 @@
 ---
+layout: chapter
 ---
 
 http://www.installrails.com/

@@ -1,8 +1,7 @@
 ---
+title: Install Batman.js
 layout: chapter
 ---
-
-# Install Batman.js
 
 Let's get your app up and running. In this chapter, we'll cover loading batman.js in your application and routing requests to your batman.js app.
 
@@ -57,9 +56,13 @@ Then open your browser of choice and visit `http://localhost:3000` (this is your
 - dir for coffee and js files
 - write npm script to compile coffee into one JS file
 - include the JS file in your main page (it's a single-page application)
+- `<div data-yield='main'></div>`
+- call `App.run()` at the bottom of the page
 
 
 ## Batman.js
+
+### Directory structure
 
 Your app should have the following structure:
 
@@ -74,6 +77,9 @@ Your app should have the following structure:
 ```
 
 _If your app has other files, don't worry about them!_
+
+
+# Before moving on...
 
 Start your development server and visit your app's _root path_ ("/"). Open your browser's JavaScript console and make sure the global variable `Batman` is defined. If so, you're ready for the next chapter!
 

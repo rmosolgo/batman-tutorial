@@ -1,0 +1,31 @@
+<section id='table_of_contents'>
+<p>Chapters</p>
+<ul>
+  {% for chapter in site.data.table_of_contents %}
+    <li>
+      <p>
+        <a href="/chapters/{{chapter.filename}}.html">
+          Chapter {{ forloop.index + 1 }}: {{ chapter.title }}
+        </a>
+      </p>
+      <ul>
+        {% for section in chapter.sections %}
+          <li>
+            <a href='/chapters/{{chapter.filename}}.html'>{{section.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+<p>Extras</p>
+<ul>
+  {% for extra in site.extras %}
+    <li>
+      <a href="/extras/{{extra.filename}}.html">
+        {{ extra.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+</section>
