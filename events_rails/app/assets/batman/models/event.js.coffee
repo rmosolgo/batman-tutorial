@@ -19,3 +19,5 @@ class Events.Event extends Batman.Model
       callback()
 
   @validate 'ends_at', @_validateGreaterThanStartsAtIfPresent
+
+  @belongsTo 'venue', inverseOf: 'events'

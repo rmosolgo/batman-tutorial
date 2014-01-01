@@ -4,4 +4,6 @@ class Events.Venue extends Batman.Model
   @resourceName: 'venues'
   @storageKey: 'venues'
 
+  @hasMany 'events', inverseOf: 'venue', autoload: false
+
   @encode 'name', 'capacity'
