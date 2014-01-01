@@ -15,8 +15,7 @@ _From now on, "model" will refer to a subclass of `Batman.Model` and "record" wi
 
 ## Ruby on Rails
 
-<a name="generate_the_scaffold"></a>
-
+<a name="generate_the_scaffold" class='batmantutorialheading'></a>
 ### Generate the scaffold
 We'll need to implement this model on our server, with a RESTful JSON interface.
 
@@ -39,8 +38,7 @@ is __below__ the batman.js handler:
 get "(*redirect_path)", to: "batman#index", constraints: lambda { |request| request.format == "text/html" }
 {% endhighlight %}
 
-<a name="put_validations_on_the_model"></a>
-
+<a name="put_validations_on_the_model" class='batmantutorialheading'></a>
 ### Put validations on the model
 Add the following lines to the class definition in `/app/models/event.rb`:
 
@@ -59,8 +57,7 @@ validates_presence_of :starts_at
 
 When your server is exposing a RESTful JSON API at `/events`, and performing the appropriate validations on incoming data, you're ready to go!
 
-<a name="make_a_new_model"></a>
-
+<a name="make_a_new_model" class='batmantutorialheading'></a>
 ### Make a new model
 Models are defined in files like `/models/#{underscore-case model name}.js.coffee`. Make `/models/event.js.coffee` and add:
 
@@ -87,8 +84,7 @@ So, what just happened?
 - The `@storageKey` property will be used as the JSON namespace when performing REST operations.
 - `@encode` told batman.js use those keys when going to and from JSON. (Any property which will be loaded from the server or sent to the server needs an encoder!)
 
-<a name="take_er_for_a_spin"></a>
-
+<a name="take_er_for_a_spin" class='batmantutorialheading'></a>
 ### Take 'er for a spin
 Start your development server, visit your root path, and open your JavaScript console. Let's see how these models work:
 
@@ -152,8 +148,7 @@ Events.Event.find(1, function(err, event){
 
 It will throw `Uncaught NotFoundError: Record couldn't be found in storage!`
 
-<a name="validations"></a>
-
+<a name="validations" class='batmantutorialheading'></a>
 ### Validations
 You should always perform validations on the server. Client-side validations can be used to give a better user experience.
 

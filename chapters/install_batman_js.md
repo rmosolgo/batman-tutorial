@@ -8,8 +8,7 @@ Let's get your app up and running. In this chapter, we'll cover loading batman.j
 
 ## Ruby on Rails
 
-<a name="make_a_new_rails_app"></a>
-
+<a name="make_a_new_rails_app" class='batmantutorialheading'></a>
 ### Make a new Rails app
 Once you have your [Ruby/Rails environment](#todo) set up, you're ready to start the project. Open your console and run these commands:
 
@@ -63,8 +62,7 @@ Then open your browser of choice and visit `http://localhost:3000` (this is your
 
 ## Batman.js
 
-<a name="directory_structure"></a>
-
+<a name="directory_structure" class='batmantutorialheading'></a>
 ### Directory structure
 Your app should have the following structure:
 

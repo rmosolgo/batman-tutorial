@@ -26,6 +26,7 @@ file TOC do
   #      - title: "Another great section!"
   #
   HEADING_MATCHER = /^###\s+/
+  NAMETAG_MATCHER = /batmantutorialheading/
   table_of_contents = []
   CHAPTERS.each_with_index do |file, idx|
     entry = {}
@@ -42,9 +43,11 @@ file TOC do
             line.sub!(/\<.*\n/, '')
             title = line.sub(HEADING_MATCHER, '')
             anchor = safe_underscore(title)
-            named_tag = %{<a name="#{anchor}"></a>}
-            line ="#{named_tag}\n\n#{line}"
+            nametag = %{<a name="#{anchor}" class='batmantutorialheading'></a>}
+            line ="#{nametag}\n#{line}"
             entry["sections"] << {"title" => title, "anchor" => anchor}
+          elsif line =~ NAMETAG_MATCHER
+            line = ""
           end
           new_content << line
         end
@@ -59,7 +62,10 @@ file TOC do
     # puts YAML.dump(entry)
     table_of_contents << entry
   end
-  open(TOC, "wb+"){ |toc| toc.write(YAML.dump(table_of_contents))}
+  open(TOC, "wb+") do |toc|
+    toc.write("# created by `rake toc` @ #{Time.now}")
+    toc.write(YAML.dump(table_of_contents))
+  end
 end
 
 desc "build #{TOC} from _config.yml 'table_of_contents_index'"

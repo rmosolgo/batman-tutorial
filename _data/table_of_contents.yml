@@ -1,37 +1,49 @@
----
+# created by `rake toc` @ 2013-12-31 19:06:25 -0500---
 - sections:
-  - title: "Why batman.js?      \n"
+  - title: |
+      Why batman.js?
     anchor: why_batman_js
-  - title: "What do I need to start?      \n"
+  - title: |
+      What do I need to start?
     anchor: what_do_i_need_to_start
   filename: introduction
   title: Introduction
 - sections:
-  - title: "Make a new Rails app      \n"
+  - title: |
+      Make a new Rails app
     anchor: make_a_new_rails_app
-  - title: "Directory structure      \n"
+  - title: |
+      Directory structure
     anchor: directory_structure
   filename: install_batman_js
   title: Install Batman.js
 - sections:
-  - title: "Make a new route in your app definition      \n"
+  - title: |
+      Make a new route in your app definition
     anchor: make_a_new_route_in_your_app_definition
-  - title: "Make a controller to handle requests      \n"
+  - title: |
+      Make a controller to handle requests
     anchor: make_a_controller_to_handle_requests
-  - title: "HTML templates go in `/html`      \n"
+  - title: |
+      HTML templates go in `/html`
     anchor: html_templates_go_in_html
   filename: static_pages
   title: Static Pages
 - sections:
-  - title: "Generate the scaffold      \n"
+  - title: |
+      Generate the scaffold
     anchor: generate_the_scaffold
-  - title: "Put validations on the model      \n"
+  - title: |
+      Put validations on the model
     anchor: put_validations_on_the_model
-  - title: "Make a new model      \n"
+  - title: |
+      Make a new model
     anchor: make_a_new_model
-  - title: "Take 'er for a spin      \n"
+  - title: |
+      Take 'er for a spin
     anchor: take_er_for_a_spin
-  - title: "Validations      \n"
+  - title: |
+      Validations
     anchor: validations
   filename: modeling_events
   title: Modeling Events
@@ -60,8 +72,8 @@
   filename: gathering_and_displaying_information
   title: Gathering and Displaying Information
 - sections: []
-  title: Event Has Many X
-  filename: event_has_many_x
+  filename: event_belongs_to_venue_venue_has_many_events
+  title: Event Belongs to Venue, Venue Has Many Events
 - sections: []
   title: Users and Authentication
   filename: users_and_authentication
@@ -69,9 +81,11 @@
   title: Event Has Many X Through Y
   filename: event_has_many_x_through_y
 - sections:
-  - title: "Make a custom view      \n"
+  - title: |
+      Make a custom view
     anchor: make_a_custom_view
-  - title: "Make a template      \n"
+  - title: |
+      Make a template
     anchor: make_a_template
   filename: custom_views
   title: Custom Views

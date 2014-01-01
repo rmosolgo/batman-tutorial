@@ -11,7 +11,7 @@ table_of_contents_index:
   - title: Static Pages
   - title: Modeling Events
   - title: Gathering and Displaying Information
-  - title: Event Has Many X
+  - title: "Event Belongs to Venue, Venue has Many Events"
   - title: Users and Authentication
   - title: Event Has Many X Through Y
   - title: Custom Views

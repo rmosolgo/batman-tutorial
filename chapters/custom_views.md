@@ -37,8 +37,7 @@ To render custom views, you need two things:
 
 So let's get to work!
 
-<a name="make_a_custom_view"></a>
-
+<a name="make_a_custom_view" class='batmantutorialheading'></a>
 ### Make a custom view
 `Batman.View`s are objects that can be rendered into the page. Generally, views are rendered via one of two ways:
 
@@ -54,8 +53,7 @@ class Events.HeaderView extends Batman.View
 
 You have defined a new view. By providing `source: 'header_view'`, you have also specified the source for its HTML: `/html/header_view.html`. Whenever this view is rendered, batman.js will use that HTML as its template.
 
-<a name="make_a_template"></a>
-
+<a name="make_a_template" class='batmantutorialheading'></a>
 ### Make a template
 Open `/html/header_view.html` and add:
 

@@ -13,8 +13,7 @@ Let's get your app to serve a new home page. We'll cover routing, controllers, a
 
 ## Batman.js
 
-<a name="make_a_new_route_in_your_app_definition"></a>
-
+<a name="make_a_new_route_in_your_app_definition" class='batmantutorialheading'></a>
 ### Make a new route in your app definition
 Open `events.js.coffee`. You should see:
 
@@ -35,8 +34,7 @@ Make sure that any other mapping with `root` is removed. (If you're using Rails,
 
 Now open your browser and visit your app's root path. You should see a blank screen. batman.js is trying to dispatch the `"home"` action of the `StaticPagesController`, but failing, because we haven't created `StaticPagesController` yet!
 
-<a name="make_a_controller_to_handle_requests"></a>
-
+<a name="make_a_controller_to_handle_requests" class='batmantutorialheading'></a>
 ### Make a controller to handle requests
 In your `controllers` directory, make a new file called `static_pages_controller.js.coffee` and add this code:
 
@@ -50,8 +48,7 @@ class Events.StaticPagesController extends Events.ApplicationController
 
 You have just defined a new controller, `StaticPagesController` and defined its `home` action. Notice that `home` has no function body. Since we're just rendering some HTML, we'll defer to to batman.js's implicit call to `render` at the end of the controller call chain.
 
-<a name="html_templates_go_in_html"></a>
-
+<a name="html_templates_go_in_html" class='batmantutorialheading'></a>
 ### HTML templates go in `/html`
 Let's create our new homepage. In your `/html` directory, create a new directory called `static_pages`. Inside that directory, open a file and save it as "home.html". Give it this content:
 

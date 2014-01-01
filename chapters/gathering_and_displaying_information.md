@@ -16,8 +16,7 @@ To provide a UI for our `Event` model, we'll:
 - provide templates for the actions of `EventsController`
 - fill those templates with view bindings
 
-<a name="routing_events"></a>
-
+<a name="routing_events" class='batmantutorialheading'></a>
 ### Routing events
 Open `events.js.coffee` and add routes for `events`:
 
@@ -36,8 +35,7 @@ class Events extends Batman.App
 
 If you're familiar with this pattern, you might notice that `destroy` and `create` routes are missing. Given the fact that a single-page appliation is fundamentally stateful (whereas a REST-based web app is stateless), these actions are accomplished in a different way. Read on!
 
-<a name="handling_requests_for_events"></a>
-
+<a name="handling_requests_for_events" class='batmantutorialheading'></a>
 ### Handling requests for events
 Calling `@resources 'events'` depends on having an `EventsController`. Let's define it in `/controllers/events_controller.js.coffee`:
 
@@ -94,8 +92,7 @@ A few things to keep in mind:
 With this controller action, we'll load a record from storage and make it accessible and observable to our view.
 
 
-<a name="view_and_template"></a>
-
+<a name="view_and_template" class='batmantutorialheading'></a>
 ### View and Template
 When using `@resources` in your app's routes, batman.js will subclass `Batman.View` on the fly, meaning that you don't have to define one yourself (but you may -- in which case it will use your implementation).  The automatically-created view will also default to check for a template with the name `"html/#{camel-cased resource name}/#{action name}.html"`. In our case, that's `"html/events/show.html"`.
 
@@ -137,13 +134,11 @@ event.save(function(err, savedEvent){
 
 You should see your template, with `Game Night` and the current time rendered in it.
 
-<a name="span_data_bind"></a>
-
+<a name="span_data_bind" class='batmantutorialheading'></a>
 ### span data-bind
 Using `<span data-bind='some.value'></span>` is a very common way to render dynamic values into static text. Don't hesitate to use it when developing a batman.js application!
 
-<a name="the_index_view"></a>
-
+<a name="the_index_view" class='batmantutorialheading'></a>
 ### The index view
 We'll do something very similar to implement a list of events:
 
@@ -185,8 +180,7 @@ Let's take advantage of that observable data with some view bindings:
 
 This introduces a few new things:
 
-<a name="view_filters"></a>
-
+<a name="view_filters" class='batmantutorialheading'></a>
 ### view filters
 View filters allow you to modify values before they're rendered into HTML. When you bind a value to a node, you can pass the value through a chain of filters. When the value changes, it is passed through the filters again, then the result is rendered into HTML.
 
@@ -213,8 +207,7 @@ Or variables accessible in the _current context_:
 </p>
 {% endhighlight %}
 
-<a name="double_dash_view_bindings"></a>
-
+<a name="double_dash_view_bindings" class='batmantutorialheading'></a>
 ### double-dash view bindings
 Some view bindings take a parameter in the _key_ of the HTML element. For example, the `data-foreach` binding above takes `upcomingevent` as a parameter. To using a binding like this, use the syntax:
 
